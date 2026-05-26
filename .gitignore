@@ -1,0 +1,7 @@
+_cache/
+.env
+.DS_Store
+node_modules/
+.netlify/
+*.pyc
+__pycache__/
