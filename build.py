@@ -274,7 +274,7 @@ LAYOUT = """<!DOCTYPE html>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/css/series.css">
+<link rel="stylesheet" href="../assets/css/series.css">
 </head>
 <body class="{body_class}">
 {nav}
@@ -286,8 +286,8 @@ LAYOUT = """<!DOCTYPE html>
 
 NAV = """<nav class="site-nav" aria-label="Site">
   <div class="inner">
-    <a class="brand" href="/"><span class="mark">More True &amp; More False</span></a>
-    <a class="crumb" href="/"><span class="sep">←</span> The Series</a>
+    <a class="brand" href="../index.html"><span class="mark">More True &amp; More False</span></a>
+    <a class="crumb" href="../index.html"><span class="sep">←</span> The Series</a>
   </div>
 </nav>
 """
@@ -344,24 +344,24 @@ PART_WORDS = {1: "One", 2: "Two", 3: "Three", 4: "Four", 5: "Five"}
 
 NAV_DATA = {
     1: {
-        "prev": ("/", "← The Series", "More True and More False"),
-        "next": ("/part-2/", "Next — Part Two", "They Are Girls. And They Were Treated Like Currency."),
+        "prev": ("../index.html#part-1", "← Back to The Series", "More True and More False"),
+        "next": ("../part-2/", "Next — Part Two", "They Are Girls. And They Were Treated Like Currency."),
     },
     2: {
-        "prev": ("/part-1/", "← Part One", "Stop Doing Pedophile Math"),
-        "next": ("/part-3/", "Next — Part Three", "More True and More False"),
+        "prev": ("../part-1/", "← Part One", "Stop Doing Pedophile Math"),
+        "next": ("../part-3/", "Next — Part Three", "More True and More False"),
     },
     3: {
-        "prev": ("/part-2/", "← Part Two", "They Are Girls. And They Were Treated Like Currency."),
-        "next": ("/part-4/", "Next — Part Four", "They Knew. And They Didn’t Care."),
+        "prev": ("../part-2/", "← Part Two", "They Are Girls. And They Were Treated Like Currency."),
+        "next": ("../part-4/", "Next — Part Four", "They Knew. And They Didn’t Care."),
     },
     4: {
-        "prev": ("/part-3/", "← Part Three", "More True and More False"),
-        "next": ("/part-5/", "Next — Part Five", "You Don’t Need a Cabal."),
+        "prev": ("../part-3/", "← Part Three", "More True and More False"),
+        "next": ("../part-5/", "Next — Part Five", "You Don’t Need a Cabal."),
     },
     5: {
-        "prev": ("/part-4/", "← Part Four", "They Knew. And They Didn’t Care."),
-        "next": ("/", "Back to → The Series", "More True and More False"),
+        "prev": ("../part-4/", "← Part Four", "They Knew. And They Didn’t Care."),
+        "next": ("../index.html#part-5", "← Back to The Series", "More True and More False"),
     },
 }
 
@@ -405,7 +405,7 @@ def render_essay(data: dict, log: list[str]) -> str:
     if hero_path.exists():
         anchor_class = ""
         alt = html_escape(f"{title} — anchor image")
-        anchor_img = f'<img src="/assets/img/part-{part_num}-hero.jpg" alt="{alt}">'
+        anchor_img = f'<img src="../assets/img/part-{part_num}-hero.jpg" alt="{alt}">'
         og_image = f"{PROD_BASE}/assets/img/part-{part_num}-hero.jpg"
     else:
         anchor_class = "no-image"
