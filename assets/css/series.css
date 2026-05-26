@@ -396,8 +396,11 @@ main { display: block; }
   padding: clamp(2.2rem, 5vh, 3.5rem) 1.5rem;
 }
 .section--tight {
-  padding-top: clamp(1.4rem, 3vh, 2.2rem);
-  padding-bottom: clamp(1.4rem, 3vh, 2.2rem);
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+.section--tight + .section--tight {
+  padding-top: 0;
 }
 
 .section-heading {
@@ -430,20 +433,20 @@ main { display: block; }
   font-size: 1.1rem;
   line-height: 1.72;
 }
-.intro-prose p:first-of-type {
+.intro-prose .opening-line {
   font-family: var(--serif);
   font-style: italic;
   font-size: 1.6rem;
   line-height: 1.4;
   color: var(--text);
-  margin-bottom: 1.8em;
+  margin-bottom: 1.4em;
 }
 .intro-prose h2 {
   font-family: var(--serif);
   font-weight: 500;
   font-size: 1.85rem;
   line-height: 1.2;
-  margin: 2.6em 0 0.8em;
+  margin: 0 0 0.8em;
   color: var(--text);
 }
 .intro-prose .divider {
