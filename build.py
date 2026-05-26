@@ -295,7 +295,7 @@ NAV = """<nav class="site-nav" aria-label="Site">
 FOOTER = """<footer class="site-footer">
   <div class="inner">
     <div class="colophon">More True and <em>More False</em> — a series by Dr. Yamicia Connor.</div>
-    <div>Published by <a href="https://laboracollective.com">The Labora Collective</a> · In Her Name · 2026</div>
+    <div>Published by <a href="https://laboracollective.com">The Labora Collective</a> · 2026</div>
   </div>
 </footer>
 """
@@ -310,8 +310,6 @@ ESSAY_TPL = """<header class="anchor {anchor_class}">{anchor_img}<div class="ove
 <section class="meta-strip">
   <div class="inner">
     <span class="author">Dr. Yamicia Connor, MD, PhD, MPH</span>
-    <span class="sep">·</span>
-    <span class="journal">In Her Name · Labora Signal</span>
     <span class="sep">·</span>
     <span class="date">{pretty_date}</span>
   </div>
@@ -345,22 +343,22 @@ PART_WORDS = {1: "One", 2: "Two", 3: "Three", 4: "Four", 5: "Five"}
 NAV_DATA = {
     1: {
         "prev": ("../index.html#part-1", "← Back to The Series", "More True and More False"),
-        "next": ("../part-2/", "Next — Part Two", "They Are Girls. And They Were Treated Like Currency."),
+        "next": ("../part-2/index.html", "Next — Part Two", "They Are Girls. And They Were Treated Like Currency."),
     },
     2: {
-        "prev": ("../part-1/", "← Part One", "Stop Doing Pedophile Math"),
-        "next": ("../part-3/", "Next — Part Three", "More True and More False"),
+        "prev": ("../part-1/index.html", "← Part One", "Stop Doing Pedophile Math"),
+        "next": ("../part-3/index.html", "Next — Part Three", "More True and More False"),
     },
     3: {
-        "prev": ("../part-2/", "← Part Two", "They Are Girls. And They Were Treated Like Currency."),
-        "next": ("../part-4/", "Next — Part Four", "They Knew. And They Didn’t Care."),
+        "prev": ("../part-2/index.html", "← Part Two", "They Are Girls. And They Were Treated Like Currency."),
+        "next": ("../part-4/index.html", "Next — Part Four", "They Knew. And They Didn’t Care."),
     },
     4: {
-        "prev": ("../part-3/", "← Part Three", "More True and More False"),
-        "next": ("../part-5/", "Next — Part Five", "You Don’t Need a Cabal."),
+        "prev": ("../part-3/index.html", "← Part Three", "More True and More False"),
+        "next": ("../part-5/index.html", "Next — Part Five", "You Don’t Need a Cabal."),
     },
     5: {
-        "prev": ("../part-4/", "← Part Four", "They Knew. And They Didn’t Care."),
+        "prev": ("../part-4/index.html", "← Part Four", "They Knew. And They Didn’t Care."),
         "next": ("../index.html#part-5", "← Back to The Series", "More True and More False"),
     },
 }
